@@ -7,9 +7,13 @@ function App() {
     {id: 'e2',title: 'Bike insurance', amount: 3400, date: new Date(2022,2,29)},
     {id: 'e3',title: 'health insurance', amount: 4000, date: new Date(2020,2,29)},
   ]
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js')
+  }
   return (
   <div>
-    <NewExpense/>
+    <NewExpense onAddExpense= {addExpenseHandler}/>
    <Expenses expenses={expenses}/>
   </div>
   );
